@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="133adf67-0c7f-448a-8891-504621df7c41" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/MoneyTracker.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/categorys/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/categorys/templates/category_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/categorys/templates/category_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/categorys/templates/category_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/categorys/templates/subcategory_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/categorys/templates/subcategory_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/categorys/templates/subcategory_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/categorys/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/media/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/Records/Record_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/Records/Record_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/Records/record_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/Records/record_update_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/Status/status_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/Status/status_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/Status/status_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/Type/type_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/Type/type_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/Type/type_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/directory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/templates/includes/inc_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/recs/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/static/css/pricing.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/static/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/static/js/color-models.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2wXw1hYBmsQKePdlaCVC3sAIgyt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/User/PycharmProjects/TexnoProject"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\MoneyTracker\config\media" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="133adf67-0c7f-448a-8891-504621df7c41" name="Changes" comment="" />
+      <created>1746201012326</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746201012326</updated>
+    </task>
+    <servers />
+  </component>
+</project>

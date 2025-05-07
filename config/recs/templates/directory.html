@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+{% block content %}
+<div class="card">
+  <div class="card-body" style="border: 1px solid black;">
+    <a style='font-size: 1.6rem; color: black;' href="{% url 'recs:status_list' %}">Статусы</a>
+  </div>
+  <div class="card-body" style="border: 1px solid black;">
+    <a style='font-size: 1.6rem; color: black;' href="{% url 'recs:type_list' %}">Типы</a>
+  </div>
+  <div class="card-body" style="border: 1px solid black;">
+    <a style='font-size: 1.6rem; color: black;' href="{% url 'categorys:category_list' %}">Категории</a>
+  </div>
+  <div class="card-body" style="border: 1px solid black;">
+    <a style='font-size: 1.6rem; color: black;' href="{% url 'categorys:subcategory_list' %}">Подкатегории</a>
+  </div>
+</div>
+{% endblock %}

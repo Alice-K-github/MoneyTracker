@@ -1,0 +1,42 @@
+{% extends 'home.html' %}
+{% block content %}
+<h1 style="text-align:center; height: 5rem;"> Записи о движении денежных средств: </h1>
+<div class="container" style="margin-bottom: 100px;">
+<table class="table table-bordered table-responsive">
+  <thead class="table-secondary align-middle">
+    <tr>
+      <th scope="col">pk</th>
+      <th scope="col">Дата создания записи</th>
+      <th scope="col">Статус</th>
+      <th scope="col">Тип операции</th>
+      <th scope="col">Категория</th>
+      <th scope="col">Подкатегория</th>
+      <th scope="col">Сумма</th>
+      <th scope="col">Комментарий</th>
+      <th scope="col">Опции</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for record in object_list %}
+    <tr bgcolor="#FFFFFF">
+      <th scope="row">{{record.pk}}</th>
+      <td>{{record.created_at}}</td>
+      <td>{{record.status.name}}</td>
+      <td>{{record.type.name}}</td>
+      <td>{{record.category.name}}</td>
+      <td>{{record.subcategory.name}}</td>
+      <td>{{record.summ}}</td>
+      <td>{{record.comment}}</td>
+      <td><div class="card-body">
+            <a class="btn btn-secondary" href="{% url 'recs:record_update' record.pk %}" style="margin-bottom: 5px;">
+                Редактировать
+            </a>
+            <a class="btn btn-secondary" href="{% url 'recs:record_delete' record.pk %}">
+                Удалить
+            </a>
+        </div></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

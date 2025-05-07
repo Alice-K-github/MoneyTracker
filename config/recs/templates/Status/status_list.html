@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+{% block content %}
+<a class="btn btn-secondary" href="{% url 'recs:status_create' %}">Создать новый статус</a>
+<ul class="list-group list-group-flush">
+{% for status in object_list %}
+  <li class="list-group-item" ><h4 align="left" >{{status.name}}</h4>
+      <h5 align="right">
+          <a class="btn btn-secondary" href="{% url 'recs:status_update' status.pk %}">
+              Редактировать
+          </a>
+          <a class="btn btn-secondary" href="{% url 'recs:status_delete' status.pk %}">
+              Удалить
+          </a>
+      </h5></li>
+{% endfor %}
+</ul>
+{% endblock %}

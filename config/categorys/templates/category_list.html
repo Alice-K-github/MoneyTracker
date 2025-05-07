@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+{% block content %}
+<a class="btn btn-secondary" href="{% url 'categorys:category_create' %}">Создать новую категорию</a>
+<ul class="list-group list-group-flush">
+{% for category in object_list %}
+  <li class="list-group-item" ><h4 align="left" >{{category.name}}</h4>
+      <h5 align="right">
+          <a class="btn btn-secondary" href="{% url 'categorys:category_update' category.pk %}">
+              Редактировать
+          </a>
+          <a class="btn btn-secondary" href="{% url 'categorys:category_delete' category.pk %}">
+              Удалить
+          </a>
+      </h5></li>
+{% endfor %}
+</ul>
+{% endblock %}
