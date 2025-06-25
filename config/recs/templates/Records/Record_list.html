@@ -1,16 +1,78 @@
 {% extends 'home.html' %}
 {% block content %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
 <h1 style="text-align:center; height: 5rem;"> Записи о движении денежных средств: </h1>
 <div class="container" style="margin-bottom: 100px;">
+
+
+
 <table class="table table-bordered table-responsive">
   <thead class="table-secondary align-middle">
     <tr>
       <th scope="col">pk</th>
       <th scope="col">Дата создания записи</th>
-      <th scope="col">Статус</th>
-      <th scope="col">Тип операции</th>
-      <th scope="col">Категория</th>
-      <th scope="col">Подкатегория</th>
+      <th scope="col">
+
+          <form method="get">
+             <label for="record_status">Статус</label>
+             <select name="record_status" id="record_status">
+             <option value="">Все</option>
+             {% for record_status in record_statuss %}
+             <option value="{{ record_status.id }}">{{ record_status.name }}</option>
+             {% endfor %}
+             </select>
+             <button type="submit">Фильтровать</button>
+          </form>
+
+      </th>
+      <th scope="col">
+
+          <form method="get">
+             <label for="record_type">Тип операции</label>
+             <select name="record_type" id="record_type">
+             <option value="">Все</option>
+             {% for record_type in record_types %}
+             <option value="{{ record_type.id }}">{{ record_type.name }}</option>
+             {% endfor %}
+             </select>
+             <button type="submit">Фильтровать</button>
+          </form>
+
+      </th>
+      <th scope="col">
+
+          <form method="get">
+             <label for="record_category">Категория</label>
+             <select name="record_category" id="record_category">
+             <option value="">Все</option>
+             {% for record_category in record_categorys %}
+             <option value="{{ record_category.id }}">{{ record_category.name }}</option>
+             {% endfor %}
+             </select>
+             <button type="submit">Фильтровать</button>
+          </form>
+
+      </th>
+      <th scope="col">
+
+          <form method="get">
+             <label for="record_subcategory">Подкатегория</label>
+             <select name="record_subcategory" id="record_subcategory">
+             <option value="">Все</option>
+             {% for record_subcategory in record_subcategorys %}
+             <option value="{{ record_subcategory.id }}">{{ record_subcategory.name }}</option>
+             {% endfor %}
+             </select>
+             <button type="submit">Фильтровать</button>
+          </form>
+
+      </th>
       <th scope="col">Сумма</th>
       <th scope="col">Комментарий</th>
       <th scope="col">Опции</th>

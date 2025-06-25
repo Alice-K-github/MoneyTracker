@@ -3,6 +3,9 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 import recs.forms
 from datetime import datetime
+import categorys.models
+
+from unicodedata import category
 
 
 # Домашняя страница
@@ -90,9 +93,40 @@ class RecordCreateView(CreateView):
 class RecordListView(ListView):
     model = recs.models.Record # Подключение модели
     template_name = 'Records/Record_list.html' # шаблон
+    context_object_name = 'records'
 
     def get_queryset(self):
-        return recs.models.Record.objects.all()
+        queryset = super().get_queryset()
+        record_status = self.request.GET.get('record_status')
+        record_type = self.request.GET.get('record_type')
+        record_category = self.request.GET.get('record_category')
+        record_subcategory = self.request.GET.get('record_subcategory')
+        if record_status:
+            queryset = queryset.filter(status_id=record_status)
+        if record_type:
+            queryset = queryset.filter(type_id=record_type)
+        if record_category:
+            queryset = queryset.filter(category_id=record_category)
+        if record_subcategory:
+            queryset = queryset.filter(subcategory_id=record_subcategory)
+        return queryset
+
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['record_statuss'] = recs.models.Status.objects.all()
+        context['record_types'] = recs.models.Type.objects.all()
+        context['record_categorys'] = categorys.models.Category.objects.all()
+        context['record_subcategorys'] = categorys.models.Sub_Category.objects.all()
+        return context
+
+
+'''class RecordListView(ListView):
+    model = recs.models.Record # Подключение модели
+    template_name = 'Records/Record_list.html' # шаблон
+
+    def get_queryset(self):
+        return recs.models.Record.objects.all()'''
 
 
 # Редактирование записи
