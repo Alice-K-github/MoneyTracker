@@ -136,14 +136,6 @@ class RecordListView(ListView):
         return context
 
 
-'''class RecordListView(ListView):
-    model = recs.models.Record # Подключение модели
-    template_name = 'Records/Record_list.html' # шаблон
-
-    def get_queryset(self):
-        return recs.models.Record.objects.all()'''
-
-
 # Редактирование записи
 class RecordUpdateView(UpdateView):
     model = recs.models.Record # Подключение модели
