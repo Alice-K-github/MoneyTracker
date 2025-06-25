@@ -4,6 +4,7 @@ from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 import recs.forms
 from datetime import datetime
 import categorys.models
+from django.db.models import Q
 
 from unicodedata import category
 
@@ -101,6 +102,20 @@ class RecordListView(ListView):
         record_type = self.request.GET.get('record_type')
         record_category = self.request.GET.get('record_category')
         record_subcategory = self.request.GET.get('record_subcategory')
+
+        start_date_str = self.request.GET.get('start_date')
+        end_date_str = self.request.GET.get('end_date')
+
+        if start_date_str and end_date_str:
+            try:
+                start_date = datetime.strptime(start_date_str, '%Y-%m-%d').date()
+                end_date = datetime.strptime(end_date_str, '%Y-%m-%d').date()
+                queryset = queryset.filter(
+                    Q(created_at__gte=start_date) & Q(created_at__lte=end_date)
+                )
+            except ValueError:
+                pass
+
         if record_status:
             queryset = queryset.filter(status_id=record_status)
         if record_type:

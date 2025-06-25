@@ -12,11 +12,21 @@
 
 
 
-<table class="table table-bordered table-responsive">
+<table class="table table-bordered ">
   <thead class="table-secondary align-middle">
     <tr>
       <th scope="col">pk</th>
-      <th scope="col">Дата создания записи</th>
+      <th scope="col">Дата создания записи
+
+          <form method="get">
+          <label for="start_date">Начальная дата:</label>
+          <input type="date" id="start_date" name="start_date" value="{{ request.GET.start_date }}">
+          <label for="end_date">Конечная дата:</label>
+          <input type="date" id="end_date" name="end_date" value="{{ request.GET.end_date }}">
+          <button type="submit">Применить</button>
+            </form>
+
+      </th>
       <th scope="col">
 
           <form method="get">
