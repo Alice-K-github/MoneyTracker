@@ -9,80 +9,78 @@
 
 <h1 style="text-align:center; height: 5rem;"> Записи о движении денежных средств: </h1>
 <div class="container" style="margin-bottom: 100px;">
-
-
-
 <table class="table table-bordered ">
   <thead class="table-secondary align-middle">
-    <tr>
-      <th scope="col">pk</th>
-      <th scope="col">Дата создания записи
-
+    <tr bgcolor="#778899">
+      <th scope="col">Фильтрация</th>
+      <th scope="col">
           <form method="get">
           <label for="start_date">Начальная дата:</label>
-          <input type="date" id="start_date" name="start_date" value="{{ request.GET.start_date }}">
+          <input type="date" id="start_date" name="start_date" value="{{ request.GET.start_date }}" style="background-color: #B0C4DE;">
           <label for="end_date">Конечная дата:</label>
-          <input type="date" id="end_date" name="end_date" value="{{ request.GET.end_date }}">
-          <button type="submit">Применить</button>
+          <input type="date" id="end_date" name="end_date" value="{{ request.GET.end_date }}" style="background-color: #B0C4DE;">
+          <button type="submit" style="background-color: #B0C4DE;">Применить</button>
             </form>
-
       </th>
       <th scope="col">
-
           <form method="get">
-             <label for="record_status">Статус</label>
-             <select name="record_status" id="record_status">
-             <option value="">Все</option>
+             <label for="record_status"></label>
+             <select name="record_status" id="record_status" style="background-color: #B0C4DE;">
+             <option value="" style="background-color: #B0C4DE;">Все</option>
              {% for record_status in record_statuss %}
-             <option value="{{ record_status.id }}">{{ record_status.name }}</option>
+             <option value="{{ record_status.id }}" style="background-color: #B0C4DE;">{{ record_status.name }}</option>
              {% endfor %}
              </select>
-             <button type="submit">Фильтровать</button>
+             <button type="submit" style="background-color: #B0C4DE;">Фильтровать</button>
           </form>
-
       </th>
       <th scope="col">
-
           <form method="get">
-             <label for="record_type">Тип операции</label>
-             <select name="record_type" id="record_type">
-             <option value="">Все</option>
+             <label for="record_type"></label>
+             <select name="record_type" id="record_type" style="background-color: #B0C4DE;">
+             <option value="" style="background-color: #B0C4DE;">Все</option>
              {% for record_type in record_types %}
-             <option value="{{ record_type.id }}">{{ record_type.name }}</option>
+             <option value="{{ record_type.id }}" style="background-color: #B0C4DE;">{{ record_type.name }}</option>
              {% endfor %}
              </select>
-             <button type="submit">Фильтровать</button>
+             <button type="submit" style="background-color: #B0C4DE;">Фильтровать</button>
           </form>
-
       </th>
       <th scope="col">
-
           <form method="get">
-             <label for="record_category">Категория</label>
-             <select name="record_category" id="record_category">
-             <option value="">Все</option>
+             <label for="record_category"></label>
+             <select name="record_category" id="record_category" style="background-color: #B0C4DE;">
+             <option value="" style="background-color: #B0C4DE;">Все</option>
              {% for record_category in record_categorys %}
-             <option value="{{ record_category.id }}">{{ record_category.name }}</option>
+             <option value="{{ record_category.id }}" style="background-color: #B0C4DE;">{{ record_category.name }}</option>
              {% endfor %}
              </select>
-             <button type="submit">Фильтровать</button>
+             <button type="submit" style="background-color: #B0C4DE;">Фильтровать</button>
           </form>
-
       </th>
       <th scope="col">
-
           <form method="get">
-             <label for="record_subcategory">Подкатегория</label>
-             <select name="record_subcategory" id="record_subcategory">
-             <option value="">Все</option>
+             <label for="record_subcategory"></label>
+             <select name="record_subcategory" id="record_subcategory" style="background-color: #B0C4DE;">
+             <option value="" style="background-color: #B0C4DE;">Все</option>
              {% for record_subcategory in record_subcategorys %}
-             <option value="{{ record_subcategory.id }}">{{ record_subcategory.name }}</option>
+             <option value="{{ record_subcategory.id }}" style="background-color: #B0C4DE;">{{ record_subcategory.name }}</option>
              {% endfor %}
              </select>
-             <button type="submit">Фильтровать</button>
+             <button type="submit" style="background-color: #B0C4DE;">Фильтровать</button>
           </form>
-
       </th>
+      <th scope="col">-</th>
+      <th scope="col">-</th>
+      <th scope="col">-</th>
+  </tr>
+  <tr>
+      <th scope="col">pk</th>
+      <th scope="col">Дата создания записи</th>
+      <th scope="col">Статус</th>
+      <th scope="col">Тип операции</th>
+      <th scope="col">Категория</th>
+      <th scope="col">Подкатегория</th>
       <th scope="col">Сумма</th>
       <th scope="col">Комментарий</th>
       <th scope="col">Опции</th>
